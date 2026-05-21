@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kngu – Fresh Flowers & Bouquets</title>
+
+  <!-- Bootstrap 5 CSS (CDN – no install needed) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts: Playfair Display + Lato -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Bootstrap Icons (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- ===========================
+       TOP ANNOUNCEMENT BAR
+  ============================ -->
+  <div class="announcement-bar text-center py-2">
+    <span>🌸 All Featured Products <strong>50% Off</strong> – </span>
+    <a href="#">Shop Now &rarr;</a>
+    <button class="btn-close btn-close-white ms-3" id="closeBar" aria-label="Close"></button>
+  </div>
+
+  <!-- ===========================
+       NAVBAR
+  ============================ -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <!-- Brand / Logo -->
+      <a class="navbar-brand brand-logo" href="#">🌷 Kngu</a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bouquets</a></li>
+              <li><a class="dropdown-item" href="#">Single Stems</a></li>
+              <li><a class="dropdown-item" href="#">Gift Sets</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">About Us</a></li>
+              <li><a class="dropdown-item" href="#">Our Experts</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+
+        <!-- Search + Icons -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="search-wrapper d-none d-lg-flex align-items-center">
+            <input type="text" class="form-control form-control-sm search-input" placeholder="Search store..."/>
+            <i class="bi bi-search search-icon"></i>
+          </div>
+          <a href="#" class="nav-icon"><i class="bi bi-person"></i></a>
+          <a href="#" class="nav-icon position-relative">
+            <i class="bi bi-bag"></i>
+            <span class="cart-badge">3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO CAROUSEL
+  ============================ -->
+  <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="hero-slide hero-slide-1">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-md-6">
+                <p class="hero-tag">20% Off for New Members</p>
+                <h1 class="hero-title">Happy Mother's Day!</h1>
+                <p class="hero-subtitle">Bouquets your mom will love.</p>
+                <a href="#" class="btn btn-primary-custom mt-3">Start Shopping</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="hero-slide hero-slide-2">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-md-6">
+                <p class="hero-tag">Free Delivery This Weekend</p>
+                <h1 class="hero-title">Roses in Full Bloom</h1>
+                <p class="hero-subtitle">Fresh-cut, hand-arranged for you.</p>
+                <a href="#" class="btn btn-primary-custom mt-3">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </section>
+
+  <!-- ===========================
+       FEATURE BADGES
+  ============================ -->
+  <section class="features-bar py-4 bg-white">
+    <div class="container">
+      <div class="row text-center g-3">
+
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon bg-orange"><i class="bi bi-truck"></i></div>
+            <div>
+              <strong>Free Delivery</strong>
+              <p class="mb-0 small text-muted">Free shipping over $50</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon bg-green"><i class="bi bi-arrow-repeat"></i></div>
+            <div>
+              <strong>Online Order</strong>
+              <p class="mb-0 small text-muted">Order with ease online</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon bg-purple"><i class="bi bi-flower1"></i></div>
+            <div>
+              <strong>Freshness</strong>
+              <p class="mb-0 small text-muted">100% fresh guarantee</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="feature-icon bg-pink"><i class="bi bi-palette"></i></div>
+            <div>
+              <strong>Made by Artists</strong>
+              <p class="mb-0 small text-muted">Hand-crafted bouquets</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       NEW PRODUCTS
+  ============================ -->
+  <section class="section-gap">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">New Products</h2>
+        <p class="section-subtitle">A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Product Card (×4) -->
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-sale">Sale</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc46?w=400&q=80" alt="Spring Snowflake" class="product-img"/>
+              <div class="product-overlay">
+                <a href="#" class="btn btn-sm btn-outline-light">Quick View</a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★☆</div>
+              <h6 class="product-name">Spring Snowflake</h6>
+              <p class="product-price"><span class="price-old">$99.00</span> <span class="price-new">$49.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=400&q=80" alt="Rose Bouquet" class="product-img"/>
+              <div class="product-overlay">
+                <a href="#" class="btn btn-sm btn-outline-light">Quick View</a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h6 class="product-name">Rose Snapport</h6>
+              <p class="product-price"><span class="price-new">$60.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-new">New</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=400&q=80" alt="Scarlet Sage" class="product-img"/>
+              <div class="product-overlay">
+                <a href="#" class="btn btn-sm btn-outline-light">Quick View</a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★☆</div>
+              <h6 class="product-name">Scarlet Sage</h6>
+              <p class="product-price"><span class="price-old">$208.00</span> <span class="price-new">$149.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1477519242566-6ae87c31d212?w=400&q=80" alt="Foxglove Flower" class="product-img"/>
+              <div class="product-overlay">
+                <a href="#" class="btn btn-sm btn-outline-light">Quick View</a>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h6 class="product-name">Foxglove Flower</h6>
+              <p class="product-price"><span class="price-new">$119.00</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       PROMO BANNER (Valentine)
+  ============================ -->
+  <section class="promo-banner section-gap">
+    <div class="container">
+      <div class="row align-items-center g-4">
+
+        <!-- Image side -->
+        <div class="col-md-6">
+          <div class="promo-img-grid">
+            <img src="https://images.unsplash.com/photo-1559181567-c3190ca9be46?w=600&q=80" alt="Flowers arrangement" class="promo-img-main"/>
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="col-md-6">
+          <h2 class="promo-title">Surprise Your Valentine! Let us arrange a smile for her.</h2>
+          <p class="promo-text">When flowers are our inspiration to create lasting memories, whatever the occasion inspiring lasting memories.</p>
+          <ul class="promo-list">
+            <li><i class="bi bi-check-circle-fill"></i> Hand-picked just for you</li>
+            <li><i class="bi bi-check-circle-fill"></i> Hand-picked just for you</li>
+            <li><i class="bi bi-check-circle-fill"></i> Hand-picked just for you</li>
+          </ul>
+          <a href="#" class="btn btn-primary-custom mt-3">More Details</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FEATURED ITEMS
+  ============================ -->
+  <section class="section-gap bg-light-rose">
+    <div class="container">
+      <div class="section-header text-center mb-4">
+        <h2 class="section-title">Featured Items</h2>
+        <p class="section-subtitle">A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="d-flex justify-content-center gap-3 mb-5 filter-tabs">
+        <button class="filter-btn active" data-filter="all">Shop All</button>
+        <button class="filter-btn" data-filter="popular">Most Popular</button>
+        <button class="filter-btn" data-filter="sale">On Sale</button>
+      </div>
+
+      <!-- Row 1 -->
+      <div class="row g-4">
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-sale">-20%</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc46?w=400&q=80" alt="Lily Majesty Palm" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★☆</div>
+              <h6 class="product-name">Lily Majesty Palm</h6>
+              <p class="product-price"><span class="price-old">$99.00</span> <span class="price-new">$79.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-sale">-15%</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=400&q=80" alt="Mini Roses" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h6 class="product-name">Mini Roses</h6>
+              <p class="product-price"><span class="price-old">$119.00</span> <span class="price-new">$100.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-popular">Popular</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=400&q=80" alt="Spring Snowflake" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★☆</div>
+              <h6 class="product-name">Spring Snowflake</h6>
+              <p class="product-price"><span class="price-old">$74.00</span> <span class="price-new">$49.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1477519242566-6ae87c31d212?w=400&q=80" alt="Pink Snapport" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h6 class="product-name">Pink Snapport</h6>
+              <p class="product-price"><span class="price-new">$68.00</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row g-4 mt-1">
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-sale">-10%</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=400&q=80" alt="Sweet Alyssum" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★☆</div>
+              <h6 class="product-name">Sweet Alyssum</h6>
+              <p class="product-price"><span class="price-new">$95.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?w=400&q=80" alt="Summer Savory" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h6 class="product-name">Summer Savory</h6>
+              <p class="product-price"><span class="price-old">$330.00</span> <span class="price-new">$290.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-badge badge-sale">-18%</div>
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=400&q=80" alt="Rock Snapport" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★☆</div>
+              <h6 class="product-name">Rock Snapport</h6>
+              <p class="product-price"><span class="price-new">$38.00</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1487530811015-780f4f231ade?w=400&q=80" alt="Majesty Palm" class="product-img"/>
+              <div class="product-overlay"><a href="#" class="btn btn-sm btn-outline-light">Quick View</a></div>
+            </div>
+            <div class="product-info">
+              <div class="stars">★★★★★</div>
+              <h6 class="product-name">Majesty Palm</h6>
+              <p class="product-price"><span class="price-new">$119.00</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       TESTIMONIAL CAROUSEL
+  ============================ -->
+  <section class="testimonial-section section-gap">
+    <div class="container">
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+
+          <div class="carousel-item active">
+            <p class="testimonial-text">"Felis eu pede nulla pretium. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus ligula felis eu pede mollis pretium."</p>
+            <div class="testimonial-avatar">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Toni" class="rounded-circle"/>
+            </div>
+            <strong>Toni / CEO</strong>
+          </div>
+
+          <div class="carousel-item">
+            <p class="testimonial-text">"Wonderful service and beautiful flowers! My mother was absolutely delighted with her birthday bouquet. Will definitely order again!"</p>
+            <div class="testimonial-avatar">
+              <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria" class="rounded-circle"/>
+            </div>
+            <strong>Maria / Customer</strong>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev testimonial-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="carousel-control-next testimonial-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FLOWER EXPERTS
+  ============================ -->
+  <section class="section-gap">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Flower Experts</h2>
+        <p class="section-subtitle">A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-6 col-sm-4 col-md-3 text-center">
+          <div class="expert-card">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Marcos Alonso" class="expert-img"/>
+            <h6 class="mt-3 mb-0">Marcos Alonso</h6>
+            <p class="text-muted small">Biologist</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 text-center">
+          <div class="expert-card">
+            <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Diana Frilsen" class="expert-img"/>
+            <h6 class="mt-3 mb-0">Diana Frilsen</h6>
+            <p class="text-muted small">Photographer</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 text-center">
+          <div class="expert-card">
+            <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Tanvi Gross" class="expert-img"/>
+            <h6 class="mt-3 mb-0">Tanvi Gross</h6>
+            <p class="text-muted small">Founder</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-4 col-md-3 text-center">
+          <div class="expert-card">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Aimee Dobey" class="expert-img"/>
+            <h6 class="mt-3 mb-0">Aimee Dobey</h6>
+            <p class="text-muted small">Florist</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       BLOG SECTION
+  ============================ -->
+  <section class="section-gap bg-light-rose">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">From Our Blog</h2>
+        <p class="section-subtitle">A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc46?w=600&q=80" alt="Flower Beauty" class="blog-img"/>
+            <div class="blog-body">
+              <span class="blog-category">Floral Tips</span>
+              <h6 class="blog-title">Flower Beauty</h6>
+              <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <a href="#" class="blog-link">Continue Reading &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=600&q=80" alt="Local Florists" class="blog-img"/>
+            <div class="blog-body">
+              <span class="blog-category">Inspiration</span>
+              <h6 class="blog-title">Local Florists</h6>
+              <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <a href="#" class="blog-link">Continue Reading &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=600&q=80" alt="Flower Power" class="blog-img"/>
+            <div class="blog-body">
+              <span class="blog-category">Lifestyle</span>
+              <h6 class="blog-title">Flower Power</h6>
+              <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <a href="#" class="blog-link">Continue Reading &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       NEWSLETTER
+  ============================ -->
+  <section class="newsletter-section section-gap text-center">
+    <div class="container">
+      <h2 class="section-title mb-2">Join The Colorful Bunch!</h2>
+      <p class="section-subtitle mb-4">Subscribe for exclusive deals, seasonal collections, and floral inspiration.</p>
+      <form class="newsletter-form d-flex justify-content-center gap-2 flex-wrap" onsubmit="handleNewsletter(event)">
+        <input type="email" class="form-control newsletter-input" placeholder="Enter your email address..." required/>
+        <button type="submit" class="btn btn-primary-custom">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-md-3">
+          <a class="navbar-brand brand-logo text-white" href="#">🌷 Kngu</a>
+          <p class="footer-tagline mt-3">A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.</p>
+          <div class="social-links mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+          </div>
+        </div>
+
+        <!-- Information -->
+        <div class="col-6 col-md-2">
+          <h6 class="footer-heading">Information</h6>
+          <ul class="footer-links">
+            <li><a href="#">Search Terms</a></li>
+            <li><a href="#">Advanced Search</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Store Location</a></li>
+            <li><a href="#">Orders & Returns</a></li>
+          </ul>
+        </div>
+
+        <!-- My Account -->
+        <div class="col-6 col-md-2">
+          <h6 class="footer-heading">My Account</h6>
+          <ul class="footer-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Legal Notice</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Help -->
+        <div class="col-6 col-md-2">
+          <h6 class="footer-heading">Help</h6>
+          <ul class="footer-links">
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Pricing Plans</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-6 col-md-3">
+          <h6 class="footer-heading">Customer Service</h6>
+          <ul class="footer-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">View Your Order</a></li>
+            <li><a href="#">Gift card</a></li>
+            <li><a href="#">Legal Notice</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2025 Kngu. All Rights Reserved.</p>
+        <div class="payment-icons">
+          <i class="bi bi-credit-card"></i>
+          <i class="bi bi-paypal"></i>
+          <i class="bi bi-wallet2"></i>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (CDN – includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
