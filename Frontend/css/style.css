@@ -1,0 +1,740 @@
+/* ============================================================
+   KNGU FLOWERS – Main Stylesheet
+   Author: Your Name
+   Description: Custom styles for Kngu flower shop homepage.
+                Built on top of Bootstrap 5.
+   ============================================================ */
+
+
+/* ─────────────────────────────
+   1. CSS CUSTOM PROPERTIES (Variables)
+───────────────────────────── */
+:root {
+  --color-primary:    #e05c7a;   /* Brand pink */
+  --color-primary-dk: #c0405e;   /* Darker pink for hover */
+  --color-dark:       #1a1a2e;   /* Footer / dark text */
+  --color-text:       #444444;
+  --color-muted:      #888888;
+  --color-bg-rose:    #fff7f8;   /* Soft blush background */
+  --color-star:       #f5a623;   /* Star rating yellow */
+
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Lato', sans-serif;
+
+  --radius-card: 12px;
+  --transition:  all 0.3s ease;
+}
+
+
+/* ─────────────────────────────
+   2. BASE / RESET
+───────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: #fff;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* Vertical section spacing utility */
+.section-gap {
+  padding: 80px 0;
+}
+
+
+/* ─────────────────────────────
+   3. TYPOGRAPHY HELPERS
+───────────────────────────── */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--color-muted);
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+
+/* ─────────────────────────────
+   4. ANNOUNCEMENT BAR
+───────────────────────────── */
+.announcement-bar {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.88rem;
+  position: relative;
+}
+
+.announcement-bar a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#closeBar {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+}
+
+
+/* ─────────────────────────────
+   5. NAVBAR
+───────────────────────────── */
+.navbar {
+  padding: 14px 0;
+  z-index: 1000;
+}
+
+.brand-logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary) !important;
+  letter-spacing: -0.5px;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-dark) !important;
+  padding: 6px 14px !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+/* Search bar in navbar */
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 180px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  padding-right: 32px;
+  font-size: 0.85rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* Icon links (person, bag) */
+.nav-icon {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+}
+
+.nav-icon:hover {
+  color: var(--color-primary);
+}
+
+/* Cart badge */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+/* ─────────────────────────────
+   6. HERO SECTION
+───────────────────────────── */
+.hero-slide {
+  height: 540px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Slide 1 – tulips / pastel */
+.hero-slide-1 {
+  background: linear-gradient(to right, #fff0f3 55%, transparent 100%),
+              url('https://images.unsplash.com/photo-1490750967868-88df5691cc46?w=1400&q=80') right center / cover no-repeat;
+}
+
+/* Slide 2 – yellow flowers */
+.hero-slide-2 {
+  background: linear-gradient(to right, #fffbf0 55%, transparent 100%),
+              url('https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=1400&q=80') right center / cover no-repeat;
+}
+
+.hero-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--color-dark);
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-top: 0.5rem;
+}
+
+/* Carousel arrow colours */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) sepia(1) saturate(2) hue-rotate(300deg);
+}
+
+
+/* ─────────────────────────────
+   7. PRIMARY BUTTON
+───────────────────────────── */
+.btn-primary-custom {
+  background: var(--color-primary);
+  color: #fff !important;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-primary-custom:hover {
+  background: var(--color-primary-dk);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(224, 92, 122, 0.35);
+}
+
+
+/* ─────────────────────────────
+   8. FEATURES BAR
+───────────────────────────── */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Icon background colours */
+.bg-orange { background: #ff8c42; }
+.bg-green  { background: #4caf50; }
+.bg-purple { background: #9c27b0; }
+.bg-pink   { background: var(--color-primary); }
+
+
+/* ─────────────────────────────
+   9. PRODUCT CARDS
+───────────────────────────── */
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Badge (Sale / New / Popular) */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-sale     { background: var(--color-primary); }
+.badge-new      { background: #4caf50; }
+.badge-popular  { background: #ff8c42; }
+
+/* Image wrapper – enables hover overlay */
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.07);
+}
+
+/* Hover overlay with Quick View button */
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+/* Product info area */
+.product-info {
+  padding: 14px 16px 16px;
+}
+
+.stars {
+  color: var(--color-star);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+
+.product-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin-bottom: 6px;
+}
+
+.product-price {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.price-old {
+  color: var(--color-muted);
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
+.price-new {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+
+/* ─────────────────────────────
+   10. PROMO BANNER
+───────────────────────────── */
+.promo-img-main {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}
+
+.promo-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.promo-text {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.promo-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.promo-list li {
+  margin-bottom: 6px;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.promo-list li i {
+  color: var(--color-primary);
+  margin-right: 8px;
+}
+
+
+/* ─────────────────────────────
+   11. FEATURED FILTER TABS
+───────────────────────────── */
+.filter-btn {
+  background: none;
+  border: 1.5px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 22px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+
+/* ─────────────────────────────
+   12. LIGHT ROSE BACKGROUND
+───────────────────────────── */
+.bg-light-rose {
+  background: var(--color-bg-rose);
+}
+
+
+/* ─────────────────────────────
+   13. TESTIMONIAL SECTION
+───────────────────────────── */
+.testimonial-section {
+  background: linear-gradient(135deg, #fff0f3 0%, #fff 100%);
+}
+
+.testimonial-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--color-dark);
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+}
+
+.testimonial-avatar img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin: 0 auto 0.5rem;
+  border: 3px solid var(--color-primary);
+}
+
+/* Testimonial nav buttons */
+.testimonial-prev,
+.testimonial-next {
+  width: 38px;
+  height: 38px;
+  background: var(--color-primary) !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.testimonial-prev  { left: 0; }
+.testimonial-next  { right: 0; }
+
+.testimonial-prev i,
+.testimonial-next i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+/* ─────────────────────────────
+   14. FLOWER EXPERTS
+───────────────────────────── */
+.expert-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  transition: var(--transition);
+}
+
+.expert-card:hover .expert-img {
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+
+/* ─────────────────────────────
+   15. BLOG CARDS
+───────────────────────────── */
+.blog-card {
+  background: #fff;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+}
+
+.blog-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-body {
+  padding: 20px;
+}
+
+.blog-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+}
+
+.blog-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  margin: 6px 0 8px;
+}
+
+.blog-text {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin-bottom: 12px;
+}
+
+.blog-link {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.blog-link:hover {
+  color: var(--color-primary-dk);
+}
+
+
+/* ─────────────────────────────
+   16. NEWSLETTER SECTION
+───────────────────────────── */
+.newsletter-section {
+  background: #fff;
+}
+
+.newsletter-input {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 30px;
+  border: 2px solid #eee;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.newsletter-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(224, 92, 122, 0.12);
+}
+
+
+/* ─────────────────────────────
+   17. FOOTER
+───────────────────────────── */
+.site-footer {
+  background: var(--color-dark);
+  color: rgba(255,255,255,0.75);
+  padding: 60px 0 0;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+.footer-heading {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.88rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+  padding-left: 4px;
+}
+
+/* Social icons */
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 40px;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.5);
+}
+
+
+/* ─────────────────────────────
+   18. RESPONSIVE TWEAKS
+───────────────────────────── */
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 400px;
+    background-position: right top;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-input {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-gap {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-img-wrap {
+    height: 160px;
+  }
+}
