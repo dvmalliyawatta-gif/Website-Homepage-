@@ -25,3 +25,27 @@ document.addEventListener('componentsLoaded', () => {
   });
 
 });
+
+// ── Smooth Scroll for Our Experts link ────────────────
+const ourExpertsLink = document.querySelector('a[href="#flower-experts"]');
+if (ourExpertsLink) {
+  ourExpertsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.getElementById('flower-experts');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+// ── Smooth Scroll for About Us link ────────────────
+const aboutUsLink = document.querySelector('a[href="#about-us"]');
+if (aboutUsLink) {
+  aboutUsLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.getElementById('about-us');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
