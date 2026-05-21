@@ -193,7 +193,7 @@ a {
 /* Slide 1 – tulips / pastel */
 .hero-slide-1 {
   background: linear-gradient(to right, #fff0f3 55%, transparent 100%),
-              url('https://images.unsplash.com/photo-1490750967868-88df5691cc46?w=1400&q=80') right center / cover no-repeat;
+              url('https://picsum.photos/id/152/1400/540') right center / cover no-repeat;
 }
 
 /* Slide 2 – yellow flowers */
