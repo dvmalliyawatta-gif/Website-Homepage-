@@ -1,12 +1,11 @@
 /* ============================================================
    KNGU FLOWERS – Main Stylesheet
    Description: Custom styles for Kngu flower shop homepage.
-                Built on top of Bootstrap 5.
    ============================================================ */
 
 
 /* ─────────────────────────────
-   1. CSS CUSTOM PROPERTIES (Variables)
+   1. CSS CUSTOM PROPERTIES 
 ───────────────────────────── */
 :root {
   --color-primary:    #e05c7a;   /* Brand pink */
@@ -30,6 +29,11 @@
 ───────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -388,6 +392,15 @@ a {
 }
 
 
+.featured-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.featured-item.hidden {
+  display: none;
+}
+
+
 /* ─────────────────────────────
    10. PROMO BANNER
 ───────────────────────────── */
@@ -484,7 +497,7 @@ a {
   border: 3px solid var(--color-primary);
 }
 
-/* Testimonial nav buttons */
+
 .testimonial-prev,
 .testimonial-next {
   width: 38px;
@@ -729,6 +742,12 @@ a {
 
   .section-gap {
     padding: 50px 0;
+  }
+
+  
+  #testimonialCarousel .carousel-inner {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
