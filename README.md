@@ -9,7 +9,7 @@ Framework: Bootstrap 5
 Fonts: Playfair Display, Lato (Google Fonts)
 Icons: Bootstrap Icons
 
-File Structure
+#File Structure
 kngu/
 ├── index.html        # Main HTML file (all page sections)
 ├── css/
