@@ -24,6 +24,9 @@ Download and unzip the project folder
 Open index.html in any modern browser (Chrome, Firefox, Edge, Safari)
 All assets load from CDN — an internet connection is required for fonts, Bootstrap, and placeholder images
 
+Live Demo - Hosted on vercel
+https://website-homepage-1o2zwsgsv-d-malliyawatta-s-projects.vercel.app
+
 Notes
 All navigation links use href="#" as this is a static UI demo, not a full application
 Images are loaded from Unsplash CDN URLs — no local image files are required
